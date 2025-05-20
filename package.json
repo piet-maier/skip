@@ -1,0 +1,22 @@
+{
+	"name": "skip",
+	"version": "0.1.0",
+	"description": "Press CTRL + Right Arrow to skip ahead 85 seconds in any video.",
+	"private": true,
+	"scripts": {
+		"format": "biome format --write .",
+		"lint": "biome lint --write .",
+		"bundle": "bun bundle.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest",
+		"@types/webextension-polyfill": "^0.12.3",
+		"chrome-types": "latest",
+		"webextension-polyfill": "^0.12.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.8.3"
+	},
+	"trustedDependencies": ["@biomejs/biome"]
+}
