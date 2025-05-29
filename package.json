@@ -6,17 +6,19 @@
 	"scripts": {
 		"format": "biome format --write .",
 		"lint": "biome lint --write .",
-		"bundle": "bun bundle.ts"
+		"bundle": "bun bundle.ts",
+		"pack": "bun run bundle && web-ext build -s ./dist -o"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest",
 		"@types/webextension-polyfill": "^0.12.3",
 		"chrome-types": "latest",
+		"web-ext": "^8.7.1",
 		"webextension-polyfill": "^0.12.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5.8.3"
 	},
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": ["@biomejs/biome", "spawn-sync"]
 }
