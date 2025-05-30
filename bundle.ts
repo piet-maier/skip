@@ -15,6 +15,7 @@ await Bun.write(
 await Bun.build({
 	entrypoints: [resolve(import.meta.dir, "./src/background.ts")],
 	outdir: distPath,
+	minify: true,
 });
 
 for (const file of await readdir(publicPath)) {
