@@ -12,6 +12,7 @@ export function manifest(isChrome = true) {
 			48: "icon48.png",
 			128: "icon128.png",
 		},
+
 		background: isChrome
 			? {
 					service_worker: "background.js",
@@ -29,6 +30,12 @@ export function manifest(isChrome = true) {
 			},
 		},
 		permissions: ["scripting", "activeTab"],
+
+		browser_specific_settings: {
+			gecko: {
+				id: "skip@85",
+			},
+		},
 	};
 
 	return manifest;
